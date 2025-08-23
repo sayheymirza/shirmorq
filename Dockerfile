@@ -14,4 +14,4 @@ COPY package*.json ./
 RUN npm install --production --force
 
 EXPOSE 4000
-CMD ["npm", "run", "serve:ssr:adamscast"]
+CMD ["npm", "run", "start"]
