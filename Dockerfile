@@ -11,7 +11,7 @@ FROM node:22-alpine
 WORKDIR /app
 COPY --from=build /app/dist ./dist
 COPY package*.json ./
-RUN npm install --production --force
+RUN npm install --force
 
 EXPOSE 4000
 CMD ["npm", "run", "start"]
