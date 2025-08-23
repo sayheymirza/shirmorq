@@ -6,6 +6,7 @@ import { routes } from './app.routes';
 
 // import function to register Swiper custom elements
 import { register } from 'swiper/element/bundle';
+import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
 // register Swiper custom elements
 register();
 
@@ -17,6 +18,6 @@ export const appConfig: ApplicationConfig = {
     provideServiceWorker('ngsw-worker.js', {
       enabled: !isDevMode(),
       registrationStrategy: 'registerWhenStable:30000'
-    })
+    }), provideClientHydration(withEventReplay())
   ]
 };
