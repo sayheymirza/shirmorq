@@ -3,12 +3,28 @@
 @import 'animate.css';
 
 @font-face {
-    font-family: "mahboubeh_mehravar";
-    src: url('/fonts/mahboubeh_mehravar.woff2') format('woff2');
+	font-family: iransansdn;
+	font-style: normal;
+	font-weight: bold;
+    src: url('/fonts/iransansdnwebbold.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: iransansdn;
+	font-style: normal;
+	font-weight: 300;
+    src: url('/fonts/iransansdnweblight.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: iransansdn;
+	font-style: normal;
+	font-weight: normal;
+	src: url('/fonts/iransansdnweb.woff2') format('woff2');
 }
 
 * {
-    font-family: "mahboubeh_mehravar", Tahoma;
+    font-family: "iransansdn", Tahoma;
 }
 
 @layer components {
@@ -28,10 +44,20 @@
         z-index: 100;
     }
 
-    .text-border {
+    .text-stroke-sm,
+    .text-border-sm {
+        --color: white;
+        --size: 0.5px;
+    }
+
+    .text-stroke-base,
+    .text-border-base {
         --color: white;
         --size: 1px;
+    }
 
+    .text-stroke,
+    .text-border {
         text-shadow: calc(var(--size) * -1) calc(var(--size) * -1) 0 var(--color), 0 calc(var(--size) * -1) 0 var(--color), var(--size) calc(var(--size) * -1) 0 var(--color),
             var(--size) 0 0 var(--color), var(--size) var(--size) 0 var(--color), 0 var(--size) 0 var(--color),
             calc(var(--size) * -1) var(--size) 0 var(--color), calc(var(--size) * -1) 0 0 var(--color);
@@ -54,7 +80,7 @@
     }
 
     .input {
-        @apply relative bg-white p-2 h-12 rounded-[14px] bg-gradient-to-t from-gray-300 to-gray-100;
+        @apply relative bg-white h-12 rounded-[14px] bg-gradient-to-t from-gray-300 to-gray-100;
     }
 
     .input::before {
@@ -62,7 +88,7 @@
     }
 
     .input input {
-        @apply bg-transparent w-full h-full z-1 relative outline-none;
+        @apply bg-transparent w-full h-full p-2 z-1 relative outline-none text-xs leading-tight;
     }
 
     .snackbar {
@@ -108,7 +134,7 @@
     }
 
     .btn {
-        @apply text-2xl relative cursor-pointer opacity-90 hover:opacity-100 transition-opacity bg-black rounded-[16px] bg-gradient-to-t from-[var(--color-dark,#6b21a8)] to-[var(--color-light,#a855f7)] px-8 py-3 flex items-center justify-center text-white active:scale-90;
+        @apply text-lg relative cursor-pointer opacity-90 hover:opacity-100 transition-opacity bg-black rounded-[16px] bg-gradient-to-t from-[var(--color-dark,#6b21a8)] to-[var(--color-light,#a855f7)] px-8 py-3 flex items-center justify-center text-white active:scale-90;
     }
 
     .btn::before {
@@ -150,6 +176,10 @@
     .btn svg,
     .btn span {
         @apply inline-block relative z-10;
+    }
+
+    .btn span {
+        @apply text-sm;
     }
 
     .swiper-slide-shadow {

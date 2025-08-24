@@ -15,7 +15,7 @@ import { Component, input } from '@angular/core';
       <img src="{{avatar()}}" alt="{{name()}}" class="w-8 h-8 border-2 border-white rounded-full" />
 
       <span
-        class=" truncate w-full"
+        class=" truncate w-full text-xs text-stroke text-stroke-sm"
         [ngClass]="{
           'row-start-1 text-left ': position() == 'right',
           'row-start-1 text-center': position() == 'top'

@@ -27,7 +27,7 @@ export class App {
 
   public openSettings() {
     this.dialog.open(Settings, {
-      panelClass: '!absolute top-20'.split(' '),
+      panelClass: '!absolute top-20 animate__animated animate__zoomInDown'.split(' '),
     });
   }
 }

@@ -5,8 +5,8 @@ import { Component, input } from '@angular/core';
   imports: [],
   template: `
     @if(position() == 'top' || position() == 'both') {
-      <div class="flex flex-nowrap items-center mb-2 z-10">
-        <span class="text-xl font-bold z-10 px-2">
+      <div class="flex flex-nowrap items-center mb-4 z-12">
+        <span class="text-lg font-bold z-10 px-2">
           {{text()}}
         </span>
         <div class="flex-1"></div>

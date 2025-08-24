@@ -14,7 +14,7 @@ import { Player } from "./player";
           class="h-fit"
         />
 
-        <div class="bg-white shadow-lg p-2 mb-2 h-fit rounded-xl max-w-[calc(100vw-130px)] break-words">
+        <div class="bg-white shadow-lg p-2 mb-2 h-fit rounded-xl max-w-[calc(100vw-130px)] break-words text-xs">
           {{item.text}}
         </div>
 

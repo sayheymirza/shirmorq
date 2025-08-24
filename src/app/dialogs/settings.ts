@@ -18,7 +18,7 @@ import { Chat } from '../services/chat';
             } 
           </button>
 
-          <span>موزیک</span>
+          <span class="text-xs font-bold">موزیک</span>
         </div>
 
         <div class="flex flex-col items-center gap-2">
@@ -30,7 +30,7 @@ import { Chat } from '../services/chat';
             } 
           </button>
 
-          <span>افکت</span>
+          <span class="text-xs font-bold">افکت</span>
         </div>
 
         <div class="flex flex-col items-center gap-2">
@@ -42,18 +42,18 @@ import { Chat } from '../services/chat';
             } 
           </button>
 
-          <span>ویبره</span>
+          <span class="text-xs font-bold">ویبره</span>
         </div>
       </div>
 
       <div class="divider my-2"></div>
 
       <div class="grid grid-cols-2 gap-2">
-        <button class="btn btn-sm btn-blue">
+        <button class="btn btn-sm h-10 btn-blue">
           <span>حریم خصوصی</span>
         </button>
 
-        <button class="btn btn-sm btn-blue">
+        <button class="btn btn-sm h-10 btn-blue">
           <span>شرایط استفاده</span>
         </button>
       </div>
